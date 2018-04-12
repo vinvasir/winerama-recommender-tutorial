@@ -18,6 +18,6 @@ from django.urls import include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^reviews/', include('reviews.urls')),
+    url(r'^reviews/', include(('reviews.urls', 'reviews'), namespace="reviews")),
     url(r'^admin/', admin.site.urls),
 ]
