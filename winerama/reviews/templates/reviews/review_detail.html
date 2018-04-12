@@ -1,6 +1,13 @@
-<h4>Details for Review by {{ review.username }} of {{ review.wine.name }}</h4>
+{% extends 'reviews/base.html' %}
+
+{% block title %}
+<h2>Details for Review by {{ review.username }} of {{ review.wine.name }}</h2>
+{% endblock %}
+
+{% block content %}
 
 <p>Rating: {{ review.rating }}</p>
 <p>Published at: {{ review.pub_date }}</p>
 
 <p>{{ review.comment }}</p>
+{% endblock %}

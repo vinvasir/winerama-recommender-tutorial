@@ -1,4 +1,10 @@
+{% extends 'reviews/base.html' %}
+
+{% block title %}
 <h2>All wines</h2>
+{% endblock %}
+
+{% block content %}
 
 {% if wine_list %}
 <div>
@@ -14,3 +20,5 @@
 {% else %}
 <p>No wines are available.</p>
 {% endif %}
+
+{% endblock %}
