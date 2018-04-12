@@ -1,0 +1,14 @@
+<h4><a href="{% url 'reviews:wine_detail' wine.id %}">
+    {{ wine.name }}
+</a></h4>
+<h6>Average rating: {{ wine.average_rating }} of 5</h6>
+
+{% for review in wine.review_set %}
+  <div>
+    <h4><a href="{% url 'reviews:review_detail' review.id %}">
+        {{ review.wine.name }}
+    </a></h4>
+    <h6>rated {{ review.rating }} of 5 by {{ review.user_name }}</h6>
+    <p>{{ review.comment }}</p>
+  </div>
+{% endfor %}
