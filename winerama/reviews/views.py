@@ -36,7 +36,7 @@ def add_review(request, wine_id):
   if form.is_valid():
     rating = form.cleaned_data['rating']
     comment = form.cleaned_data['comment']
-    user_name = form.cleaned_data['user_name']
+    user_name = request.user.username
 
     review = Review()
     review.wine = wine
