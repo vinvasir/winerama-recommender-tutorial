@@ -2,4 +2,7 @@ Django==2.0.4
 django-bootstrap3==9.1.0
 django-registration-redux==2.4
 numpy==1.14.2
+pandas==0.22.0
+python-dateutil==2.7.2
 pytz==2018.4
+six==1.11.0
