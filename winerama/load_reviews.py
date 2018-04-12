@@ -24,9 +24,9 @@ if __name__ == "__main__":
 
   # Check number of arguments (including the command name)
   if len(sys.argv) == 2:
-    print "Reading from file " + str(sys.argv[1])
+    print("Reading from file " + str(sys.argv[1]))
     reviews_df = pd.read_csv(sys.argv[1])
-    print reviews_df
+    print(reviews_df)
 
     # apply save_review_from_row to each review in the data frame
     reviews_df.apply(
@@ -34,6 +34,6 @@ if __name__ == "__main__":
       axis=1
     )
 
-    print "There are {} reviews in DB".format(Review.objects.count())
+    print("There are {} reviews in DB".format(Review.objects.count()))
   else:
-    print "Please, provide Reviews file path"
+    print("Please, provide Reviews file path")
