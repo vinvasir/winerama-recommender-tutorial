@@ -69,6 +69,8 @@ TEMPLATES = [
     },
 ]
 
+LOGIN_REDIRECT_URL = '/reviews/review/user'
+
 WSGI_APPLICATION = 'winerama.wsgi.application'
 
 
